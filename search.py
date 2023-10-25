@@ -38,7 +38,8 @@ form_data = {
             "Station:airport:CDG",
             "Station:airport:ORY"
         ]
-    }
+    },
+    'Kw-Umbrella-Token':'d6d4f47ccdad80c2faa8c8edca2b8196d6845c5303151ea493e5405cdb97b284'
 }
 
 nights = int(form_data['nights'])
@@ -131,7 +132,7 @@ while d <= loop_end_date:
         'Accept-Language':'en-US,en;q=0.9',
         'Content-Type':'application/json',
         'Kw-Skypicker-Visitor-Uniqid':'b2bc59fe-9ac4-431a-9331-42c5f20ffc49',
-        'Kw-Umbrella-Token':'d6d4f47ccdad80c2faa8c8edca2b8196d6845c5303151ea493e5405cdb97b284',
+        'Kw-Umbrella-Token':form_data['Kw-Umbrella-Token'],
         'Origin':'https://www.kiwi.com',
         'Referer':'https://www.kiwi.com/',
         'Sec-Ch-Ua':'"Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"',
