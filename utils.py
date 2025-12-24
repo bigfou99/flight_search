@@ -24,8 +24,9 @@ def save_excel(obj, name):
         column = [cell for cell in column]
         for cell in column:
             try:
-                if len(str(cell.value)) > max_length:
-                    max_length = len(cell.value)
+                cell_value_str = str(cell.value) if cell.value is not None else ""
+                if len(cell_value_str) > max_length:
+                    max_length = len(cell_value_str)
             except:
                 pass
         adjusted_width = (max_length + 2)
